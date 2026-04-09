@@ -11,7 +11,7 @@ const AboutPage = ({ onNavigate }) => {
     const sections = [
         {
             title: "OUR STORY",
-            description: "At Maya, our journey is rooted in a profound passion for quality, a relentless drive for innovation, and an unwavering commitment to social responsibility.",
+            description: "At Clothing, our journey is rooted in a profound passion for quality, a relentless drive for innovation, and an unwavering commitment to social responsibility.",
             highlight: "Our story begins with a simple belief: fashion should not only adorn, but it should empower.",
             image: about1,
             reverse: false

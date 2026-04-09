@@ -11,12 +11,12 @@ const BlogExplanation = ({ onBack }) => {
                     <span>All Posts</span>
                 </div>
 
-                <h1 className="blog-title">THE ART OF HANDLOOM: EXPLORING THE CRAFTSMANSHIP BEHIND MAYA'S PRODUCTS</h1>
+                <h1 className="blog-title">THE ART OF HANDLOOM: EXPLORING THE CRAFTSMANSHIP BEHIND CLOTHING'S PRODUCTS</h1>
                 
                 <img src={blogImg} alt="Blog Cover" className="blog-hero-image" />
 
                 <div className="blog-content">
-                    <p className="blog-intro">At Maya, we believe that every thread tells a story, and behind each exquisite piece lies the rich tapestry of handloom craftsmanship. In this blog, let's embark on a journey to unravel the artistry, dedication, and heritage that breathe life into our handwoven products.</p>
+                    <p className="blog-intro">At Clothing, we believe that every thread tells a story, and behind each exquisite piece lies the rich tapestry of handloom craftsmanship. In this blog, let's embark on a journey to unravel the artistry, dedication, and heritage that breathe life into our handwoven products.</p>
 
                     <h2 className="blog-section-title">THE HERITAGE WE WEAVE</h2>
                     <p className="blog-text">Handloom weaving is not just a skill; it's a tradition passed down through generations, a living heritage that connects us to our roots. Our artisans, often from artisanal communities with a deep history of weaving, bring centuries-old techniques into the modern era. Each thread they weave is a testament to their craftsmanship and a continuation of a legacy.</p>
@@ -27,19 +27,19 @@ const BlogExplanation = ({ onBack }) => {
                     <p className="blog-text">The loom becomes the artist's canvas, and the weaver, the painter. Every movement, every shuttle thrown, is a stroke of creativity. The rhythmic clatter of the loom echoes the dedication woven into each piece. It's a dance between tradition and innovation, where the weaver's hands translate visions into reality.</p>
 
                     <h2 className="blog-section-title">THE DANCE OF COLORS AND PATTERNS</h2>
-                    <p className="blog-text">Maya's handwoven products are a canvas of colors and patterns, each telling a unique story. From the vibrant hues of our ethnic dresses to the intricate designs of our sarees, the combination of color and pattern reflects the diversity of Indian culture and the modern aesthetics we embrace.</p>
+                    <p className="blog-text">Clothing's handwoven products are a canvas of colors and patterns, each telling a unique story. From the vibrant hues of our ethnic dresses to the intricate designs of our sarees, the combination of color and pattern reflects the diversity of Indian culture and the modern aesthetics we embrace.</p>
                     
                     <p className="blog-text">The weavers masterfully intertwine threads, creating motifs that speak of traditions and contemporary influences. It's a harmonious blend that transcends time, making each product a wearable piece of art that carries the soul of its creator.</p>
 
                     <h2 className="blog-section-title">EMPOWERING ARTISANS AND COMMUNITIES</h2>
-                    <p className="blog-text">Behind every handwoven creation is a skilled artisan, and we take pride in fostering their talents. By providing fair wages, supporting education, and promoting sustainable practices, we aim to empower not just individuals but entire communities. When you choose Maya, you become a part of this journey, contributing to the preservation of handloom heritage.</p>
+                    <p className="blog-text">Behind every handwoven creation is a skilled artisan, and we take pride in fostering their talents. By providing fair wages, supporting education, and promoting sustainable practices, we aim to empower not just individuals but entire communities. When you choose Clothing, you become a part of this journey, contributing to the preservation of handloom heritage.</p>
 
                     <h2 className="blog-section-title">BRINGING TRADITION TO YOUR WARDROBE</h2>
-                    <p className="blog-text">Maya's handwoven products are more than garments; they are a bridge between tradition and the modern world. When you wear a saree from Maya, you carry the legacy of craftsmanship, the spirit of our artisans, and the essence of timeless beauty.</p>
+                    <p className="blog-text">Clothing's handwoven products are more than garments; they are a bridge between tradition and the modern world. When you wear a saree from Clothing, you carry the legacy of craftsmanship, the spirit of our artisans, and the essence of timeless beauty.</p>
                     
                     <p className="blog-text">Explore our collections and indulge in the artistry of handloom textiles. Join us in celebrating the craftsmanship that goes into every thread, and let your wardrobe be a canvas of stories, traditions, and enduring elegance.</p>
 
-                    <p className="blog-outro">Welcome to the world of Maya, where every thread is a masterpiece, and every creation is a celebration of the art of handloom.</p>
+                    <p className="blog-outro">Welcome to the world of Clothing, where every thread is a masterpiece, and every creation is a celebration of the art of handloom.</p>
                 </div>
             </div>
 

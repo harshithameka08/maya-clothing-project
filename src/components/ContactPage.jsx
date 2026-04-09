@@ -1,5 +1,5 @@
 import React from 'react';
-import contactImage from '../assets/6bd89ccdcbda7f2bae7305e4ea02a3c7.png';
+import contactImage from '../assets/towel.png';
 import { ArrowLeft } from 'lucide-react';
 
 const ContactPage = ({ onNavigate }) => {

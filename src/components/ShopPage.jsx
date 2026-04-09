@@ -9,7 +9,7 @@ import cottonDress from '../assets/cotton_dress.png';
 import silkKurta from '../assets/53eb08a11816095cc7482f0173617fba.png';
 import modernDress from '../assets/86ba3fe0e15b5ea6f9c5a2ee70100958.png';
 import ethnicDress from '../assets/dress.png';
-import lounge1 from '../assets/6bd89ccdcbda7f2bae7305e4ea02a3c7.png';
+import lounge1 from '../assets/towel.png';
 import lounge2 from '../assets/4efaf9972a120c416092913a9865e1a4.png';
 import earrings from '../assets/earrings.png';
 import necklace from '../assets/necklace.png';

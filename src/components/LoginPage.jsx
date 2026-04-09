@@ -61,7 +61,7 @@ const LoginPage = ({ isOpen, onClose, onLogin }) => {
            <h3>{mode === 'signup' ? 'Account Created!' : 'Reset Link Sent'}</h3>
            <p>
              {mode === 'signup' 
-               ? 'Welcome to Maya! Directing you to your shopping...' 
+               ? 'Welcome to Clothing! Directing you to your shopping...' 
                : 'Please check your email for instructions to reset your password.'}
            </p>
         </div>
@@ -73,7 +73,7 @@ const LoginPage = ({ isOpen, onClose, onLogin }) => {
         return (
           <div className="form-container">
             <div className="login-header">
-              <h2 className="login-title">JOIN MAYA</h2>
+              <h2 className="login-title">JOIN CLOTHING</h2>
               <p className="login-subtitle">Become a member for exclusive luxury access</p>
             </div>
             <form className="login-form" onSubmit={handleSubmit}>
@@ -141,7 +141,7 @@ const LoginPage = ({ isOpen, onClose, onLogin }) => {
             <button type="button" className="social-login-btn google">
               <img src="https://www.google.com/favicon.ico" alt="G" /> Continue with Google
             </button>
-            <p className="signup-prompt">New to Maya? <a href="#" onClick={() => setMode('signup')}>Sign up now</a></p>
+            <p className="signup-prompt">New to Clothing? <a href="#" onClick={() => setMode('signup')}>Sign up now</a></p>
           </div>
         );
     }

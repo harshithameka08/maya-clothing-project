@@ -14,7 +14,7 @@ const OrderSuccessPage = ({ onNavigate }) => {
             <Check size={48} color="white" strokeWidth={3} />
           </div>
           <h1 className="success-title">Order Confirmed!</h1>
-          <h2 className="success-subtitle">Thank you for choosing maya!</h2>
+          <h2 className="success-subtitle">Thank you for choosing Clothing!</h2>
           <p className="success-message">
             Your order is confirmed and on its way to being processed. 
             We're thrilled to be a part of your shopping experience.

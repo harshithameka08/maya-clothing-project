@@ -14,8 +14,10 @@ const Navbar = ({ onNavigate, cartCount, wishlistCount, currentView }) => {
         </ul>
         
         <div className="logo-section" onClick={() => onNavigate('home')} style={{cursor: 'pointer'}}>
-          <div className="logo">maya</div>
-          <div className="logo-tagline">BY CHINMAYA POLYARAPU</div>
+          <div className="text-logo">
+            <span className="logo-main">CLOTHING</span>
+            <span className="logo-sub">MADE WITH LOVE</span>
+          </div>
         </div>
         
         <div className="nav-actions">
@@ -50,20 +52,31 @@ const Navbar = ({ onNavigate, cartCount, wishlistCount, currentView }) => {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .logo {
-          font-family: var(--font-serif);
+        .text-logo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1;
+        }
+        .logo-main {
+          font-family: 'Cormorant Garamond', serif;
           font-size: 2.8rem;
           font-weight: 300;
-          letter-spacing: 0.1em;
-          line-height: 0.8;
-          color: #1a1a1a;
+          letter-spacing: 0.15em;
+          color: #1a2433;
         }
-        .logo-tagline {
-          font-size: 0.4rem;
-          letter-spacing: 0.2em;
-          margin-top: 0.3rem;
-          color: #666;
+        .logo-sub {
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.5rem;
+          letter-spacing: 0.4em;
+          color: #1a2433;
+          margin-top: 0.2rem;
+          opacity: 0.8;
+          font-weight: 500;
         }
         .nav-links {
           display: flex;
@@ -128,7 +141,7 @@ const Navbar = ({ onNavigate, cartCount, wishlistCount, currentView }) => {
         }
         @media (max-width: 992px) {
           .nav-links { gap: 1rem; }
-          .logo { font-size: 2rem; }
+          .logo-main { font-size: 2.2rem; }
         }
         @media (max-width: 768px) {
           .nav-links { display: none; }

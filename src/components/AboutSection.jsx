@@ -1,21 +1,23 @@
 import React from 'react';
 import mainImage from '../assets/fbd17fba0ac365da5cb6e945d52ec98f.png';
-import subImage from '../assets/6bd89ccdcbda7f2bae7305e4ea02a3c7.png';
+import subImage from '../assets/towel.png';
 
 const AboutSection = ({ onNavigate }) => {
   return (
     <section className="about-main-wrapper">
       <div className="about-layout-container">
-        <div className="about-visual-grid animate-left opacity-0 delay-1">
+        <div className="about-visual-grid">
           <div className="visual-frame frame-main">
-            <img src={mainImage} alt="Elegance" className="visual-img" />
+            <img src={mainImage} alt="Brand Story" className="visual-img" />
           </div>
-          <div className="visual-frame frame-sub animate-scale opacity-0 delay-3">
-            <img src={subImage} alt="Modern Style" className="visual-img" />
+          <div className="visual-frame frame-sub">
+            <img src={subImage} alt="Artisan Details" className="visual-img" />
           </div>
-          <div className="about-brand-tag animate-up opacity-0 delay-4">
-            <h2 className="brand-logotype">maya</h2>
-            <p className="brand-subtitle">BY CHINMAYA POLYARAPU</p>
+          <div className="about-brand-tag">
+            <div className="text-logo-brand">
+              <span className="logo-main-brand">clothing</span>
+              <span className="logo-sub-brand">MADE WITH LOVE</span>
+            </div>
           </div>
         </div>
         
@@ -24,7 +26,7 @@ const AboutSection = ({ onNavigate }) => {
             DISCOVER TIMELESS <br /> ELEGANCE & MODERN STYLE
           </h2>
           <p className="about-description-text animate-up opacity-0 delay-3">
-            At Maya, we bring you a world of exquisite fashion 
+            At Clothing, we bring you a world of exquisite fashion 
             that's as unique as you are. 
             Our curated collection is a harmonious blend of 
             tradition and innovation, offering you the perfect 
@@ -40,90 +42,94 @@ const AboutSection = ({ onNavigate }) => {
       
       <style dangerouslySetInnerHTML={{ __html: `
         .about-main-wrapper {
-          padding: 2rem 2rem 2rem 2rem;
-          background-color: #f2ebe1;
+          padding: 6rem 2rem;
+          background-color: #f5f1eb;
         }
         .about-layout-container {
-          max-width: 1400px;
+          max-width: 1300px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1.2fr 1fr;
+          grid-template-columns: 1fr 1fr;
           align-items: center;
-          gap: 5rem;
+          gap: 6rem;
         }
         .about-visual-grid {
           position: relative;
-          height: 600px;
+          height: 700px;
           display: flex;
           align-items: center;
+          justify-content: flex-start;
+          padding-left: 2rem;
         }
         .visual-frame {
-          border-radius: 12px;
+          border-radius: 8px;
           overflow: hidden;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-          transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         .visual-img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.8s ease;
+          transition: transform 1s ease;
         }
         .frame-main {
-          width: 380px;
-          height: 480px;
+          width: 520px;
+          height: 680px;
           z-index: 1;
-          animation: smooth-float 6s ease-in-out infinite;
+          animation: smooth-float 8s ease-in-out infinite;
         }
         .frame-sub {
           position: absolute;
-          width: 180px;
-          height: 320px;
-          right: 15%;
-          bottom: 5%;
+          width: 320px;
+          height: 460px;
+          left: 320px;
+          top: 220px;
           z-index: 3;
-          border: 4px solid #f2ebe1;
-          animation: smooth-float 5s ease-in-out infinite reverse;
+          animation: smooth-float 7s ease-in-out infinite reverse;
         }
         @keyframes smooth-float {
             0%, 100% { transform: translateY(0) rotate(0); }
-            50% { transform: translateY(-15px) rotate(1deg); }
-        }
-        .about-visual-grid:hover .frame-main {
-            transform: scale(1.02) translateX(-10px);
-        }
-        .about-visual-grid:hover .frame-sub {
-            transform: scale(1.05) translate(10px, -10px);
+            50% { transform: translateY(-25px) rotate(0.5deg); }
         }
         .about-visual-grid:hover .visual-img {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
         .about-brand-tag {
           position: absolute;
           top: 15%;
-          left: 45%;
-          z-index: 2;
+          left: 340px;
+          z-index: 10;
           text-align: center;
-          animation: pulse-tag 4s ease-in-out infinite;
+          animation: pulse-tag 5s ease-in-out infinite;
+          pointer-events: none;
         }
         @keyframes pulse-tag {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; }
+            0%, 100% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.02); opacity: 1; }
         }
-        .brand-logotype {
+        .text-logo-brand {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 0.85;
+          text-align: center;
+        }
+        .logo-main-brand {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 8rem;
-          color: #1a2433;
-          line-height: 0.8;
-          margin: 0;
+          font-size: 5.8rem;
           font-weight: 300;
+          letter-spacing: 0.02em;
+          color: #1a2433;
+          text-transform: lowercase;
         }
-        .brand-subtitle {
+        .logo-sub-brand {
           font-family: 'Outfit', sans-serif;
           font-size: 0.6rem;
-          letter-spacing: 0.25em;
+          letter-spacing: 0.5em;
           color: #1a2433;
-          margin-top: 5px;
+          margin-top: 0.5rem;
+          opacity: 0.8;
           font-weight: 500;
         }
         .about-text-content {
@@ -140,26 +146,28 @@ const AboutSection = ({ onNavigate }) => {
         }
         .about-description-text {
           font-family: 'Outfit', sans-serif;
-          font-size: 1.05rem;
-          color: #666;
-          line-height: 1.7;
-          margin-bottom: 3rem;
-          max-width: 520px;
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.8;
+          margin-bottom: 3.5rem;
+          max-width: 480px;
           font-weight: 300;
+          letter-spacing: 0.01em;
         }
         .know-more-btn {
-          background-color: #2c3e50;
+          background-color: #1d2d3c;
           color: #fff;
           border: none;
-          padding: 1.2rem 3.5rem;
-          font-size: 0.9rem;
+          padding: 1.25rem 3.8rem;
+          font-size: 0.85rem;
           font-weight: 600;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.2em;
           cursor: pointer;
-          transition: all 0.3s ease;
-          border-radius: 4px;
+          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          border-radius: 2px;
           position: relative;
           overflow: hidden;
+          text-transform: uppercase;
         }
         .know-more-btn::after {
             content: '';
@@ -188,7 +196,7 @@ const AboutSection = ({ onNavigate }) => {
         }
         @media (max-width: 640px) {
           .about-section-heading { font-size: 1.8rem; }
-          .brand-logotype { font-size: 5rem; }
+          .logo-main-brand { font-size: 5rem; }
           .frame-main { width: 300px; height: 400px; }
           .frame-sub { width: 140px; height: 240px; }
         }

@@ -25,8 +25,10 @@ const Footer = ({ onNavigate }) => {
 
                 <div className="footer-brand-column">
                     <div className="footer-logo-box">
-                        <h2 className="footer-logo-text">maya</h2>
-                        <span className="footer-logo-tagline">BY CHINMAYA POLYARAPU</span>
+                        <div className="text-logo-footer">
+                            <span className="logo-main-footer">CLOTHING</span>
+                            <span className="logo-sub-footer">MADE WITH LOVE</span>
+                        </div>
                     </div>
                     <div className="footer-social-box">
                         <a href="#"><Send size={20} /></a>
@@ -53,28 +55,9 @@ const Footer = ({ onNavigate }) => {
                 </div>
             </div>
             
-            <div className="sub-footer-social">
-                <div className="sub-footer-inner">
-                    <Send size={18} />
-                    <Facebook size={18} />
-                    <MessageCircle size={18} />
-                    <Instagram size={18} />
-                </div>
-            </div>
+
 
             <style dangerouslySetInnerHTML={{ __html: `
-                .sub-footer-social {
-                    padding-top: 3rem;
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                }
-                .sub-footer-inner {
-                    display: flex;
-                    gap: 1.5rem;
-                    color: #1a2433;
-                    opacity: 0.8;
-                }
                 .footer-section-main {
                     padding: 2rem 2rem 4rem;
                     background-color: #f2ebe1;
@@ -116,19 +99,27 @@ const Footer = ({ onNavigate }) => {
                     flex-direction: column;
                     align-items: center;
                 }
-                .footer-logo-text {
-                    font-family: 'Cormorant Garamond', serif;
-                    font-size: 3.5rem;
-                    color: #1a2433;
-                    margin: 0;
+                .text-logo-footer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     line-height: 1;
                 }
-                .footer-logo-tagline {
-                    font-family: 'Outfit', sans-serif;
-                    font-size: 0.5rem;
+                .logo-main-footer {
+                    font-family: 'Cormorant Garamond', serif;
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                    letter-spacing: 0.15em;
                     color: #1a2433;
-                    letter-spacing: 0.3em;
-                    margin-top: -5px;
+                }
+                .logo-sub-footer {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 0.6rem;
+                    letter-spacing: 0.4em;
+                    color: #1a2433;
+                    margin-top: 0.2rem;
+                    opacity: 0.8;
+                    font-weight: 500;
                 }
                 .footer-social-box {
                     display: flex;

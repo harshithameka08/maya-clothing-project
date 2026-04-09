@@ -151,7 +151,7 @@ const App = () => {
     ];
 
     return (
-        <div className="maya-app">
+        <div className="main-app-container">
             <Navbar 
                 onNavigate={handleNavigate} 
                 cartCount={cart.reduce((acc, c) => acc + (c.qty !== undefined ? c.qty : 1), 0)} 
@@ -313,7 +313,7 @@ const App = () => {
 
             <style dangerouslySetInnerHTML={{
                 __html: `
-                .maya-app {
+                .main-app-container {
                     background-color: #fdfaf3;
                     min-height: 100vh;
                 }

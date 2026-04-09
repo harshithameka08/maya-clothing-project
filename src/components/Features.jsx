@@ -19,19 +19,18 @@ const MoleculeIcon = () => (
 );
 
 const SpoolIcon = () => (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="12" y="8" width="24" height="4" rx="2" fill="#1a2433" />
-        <rect x="12" y="36" width="24" height="4" rx="2" fill="#1a2433" />
-        <rect x="16" y="12" width="16" height="24" fill="#1a2433" />
-        <path d="M16 16H32M16 20H32M16 24H32M16 28H32M16 32H32" stroke="#eeede7" strokeWidth="1" />
-        <path d="M12 24C12 24 8 24 8 20" stroke="#1a2433" strokeWidth="2" strokeLinecap="round" />
+    <svg width="48" height="48" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 8H32M12 36H32" stroke="#1a2433" strokeWidth="4" strokeLinecap="round"/>
+        <rect x="15" y="11" width="14" height="22" fill="#1a2433"/>
+        <path d="M15 15H29M15 19H29M15 23H29M15 27H29M15 31H29" stroke="#EBE8E2" strokeWidth="1.5"/>
+        <path d="M11 22C11 22 7 22 7 18C7 14 11 14 11 14" stroke="#1a2433" strokeWidth="2" strokeLinecap="round"/>
     </svg>
 );
 
 const SustainabilityIcon = () => (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 10C24 10 20 6 16 6C12 6 8 10 8 14C8 20 16 24 24 24M24 10C24 10 28 6 32 6C36 6 40 10 40 14C40 20 32 24 24 24M24 38C24 38 28 42 32 42C36 42 40 38 40 34C40 28 32 24 24 24" stroke="#1a2433" strokeWidth="3" strokeLinecap="round" />
-        <path d="M24 10L24 24M16 8L20 12M32 8L28 12M32 40L28 36" stroke="#1a2433" strokeWidth="2" strokeLinecap="round" />
+        <path d="M24 12C24 12 20 8 16 8C12 8 8 12 8 16C8 22 16 26 24 26M24 12C24 12 28 8 32 8C36 8 40 12 40 16C40 22 32 26 24 26M24 40C24 40 28 44 32 44C36 44 40 40 40 36C40 30 32 26 24 26" stroke="#1a2433" strokeWidth="3" strokeLinecap="round" />
+        <path d="M24 12L24 26" stroke="#1a2433" strokeWidth="2" strokeLinecap="round" />
     </svg>
 );
 
@@ -82,94 +81,115 @@ const Features = () => {
 
             <style dangerouslySetInnerHTML={{ __html: `
                 .features-main-section {
-                    padding: 2rem 2rem 2rem 2rem;
-                    background-color: #f2ebe1;
+                    padding: 3rem 2rem 4rem 2rem;
+                    background-color: #f2efe1;
+                    overflow: hidden;
                 }
                 .features-inner-container {
-                    max-width: 1400px;
+                    max-width: 1200px;
                     margin: 0 auto;
                     text-align: center;
                 }
                 .features-section-title {
-                    color: #2fb52f;
+                    color: #2FB52F;
                     font-family: 'Outfit', sans-serif;
                     font-weight: 500;
                     font-size: 1.8rem;
                     letter-spacing: 0.08em;
-                    margin-bottom: 4rem;
+                    margin-bottom: 3.5rem;
                     text-transform: uppercase;
                 }
                 .features-items-grid {
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
-                    gap: 2rem;
+                    gap: 1.2rem;
                 }
                 .feature-item-box {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    transition: transform 0.4s ease;
+                }
+                .feature-item-box:hover {
+                    transform: translateY(-5px);
                 }
                 .feature-icon-container {
-                    width: 140px;
-                    height: 120px;
-                    background-color: #eeede7;
+                    width: 100%;
+                    max-width: 240px;
+                    height: 140px;
+                    background-color: #EBE8E2;
                     border-radius: 12px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1.5rem;
                     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-                    animation: float 4s ease-in-out infinite;
+                    position: relative;
+                    overflow: hidden;
                 }
-                @keyframes float {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-10px); }
+                .feature-icon-container::after {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: -100%;
+                    width: 100%; height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                    transition: 0.5s;
                 }
-                .feature-item-box:nth-child(even) .feature-icon-container {
-                    animation-delay: 1s;
+                .feature-item-box:hover .feature-icon-container::after {
+                    left: 100%;
                 }
-                .feature-icon-container:hover {
-                    transform: scale(1.1) rotate(3deg);
-                    background-color: #1a2433;
-                    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                .feature-item-box:hover .feature-icon-container {
+                    background-color: #e8e5de;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
                 }
-                .feature-icon-container:hover svg path,
-                .feature-icon-container:hover svg rect,
-                .feature-icon-container:hover svg circle {
-                    fill: #fff;
-                    stroke: #fff;
+                .feature-icon-container svg {
+                    width: 50px;
+                    height: 50px;
+                    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+                .feature-item-box:hover .feature-icon-container svg {
+                    transform: scale(1.1) rotate(5deg);
                 }
                 .feature-item-heading {
                     font-family: 'Outfit', sans-serif;
-                    font-weight: 600;
-                    font-size: 1rem;
+                    font-weight: 500;
+                    font-size: 0.95rem;
                     color: #1a2433;
                     letter-spacing: 0.05em;
-                    margin-bottom: 1.2rem;
-                    line-height: 1.4;
-                    max-width: 180px;
+                    margin-bottom: 0.8rem;
+                    line-height: 1.3;
+                    max-width: 200px;
+                    text-transform: uppercase;
                 }
                 .feature-item-text {
                     font-family: 'Outfit', sans-serif;
                     font-weight: 300;
                     font-size: 0.85rem;
                     color: #555;
-                    line-height: 1.6;
-                    max-width: 250px;
+                    line-height: 1.5;
+                    max-width: 240px;
+                    margin: 0 auto;
                 }
-                @media (max-width: 992px) {
+                @media (max-width: 1100px) {
                     .features-items-grid {
                         grid-template-columns: repeat(2, 1fr);
-                        gap: 3rem 2rem;
+                        gap: 3rem 1.5rem;
+                    }
+                    .feature-icon-container {
+                        height: 130px;
                     }
                 }
                 @media (max-width: 640px) {
                     .features-items-grid {
                         grid-template-columns: 1fr;
+                        gap: 2.5rem;
                     }
                     .features-section-title {
-                        font-size: 1.4rem;
+                        font-size: 1.5rem;
+                        margin-bottom: 2.5rem;
+                    }
+                    .features-main-section {
+                        padding: 3rem 1rem;
                     }
                 }
             `}} />
